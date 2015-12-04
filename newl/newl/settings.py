@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-	'disqus',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -71,8 +70,9 @@ TEMPLATES = [
     },
 ]
 
-DISQUS_API_KEY = '***'
-DISQUS_WEBSITE_SHORTNAME = '***'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 WSGI_APPLICATION = 'newl.wsgi.application'
 
